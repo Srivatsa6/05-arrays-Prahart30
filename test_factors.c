@@ -21,7 +21,7 @@ int main(void) {
   printf("Factors: passed\n");
 }
    int factors(int n,int e[]){
-        int i=0, j;
+        int i=0;
         while(n%2==0){
           e[i]=2;
           i++;
