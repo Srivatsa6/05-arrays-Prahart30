@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <assert.h>
 
-int factors(int n,int a[]){
+int factors(int a[], int n){
         int i=0, j;
         while(n%2==0){
           a[i]=2;
