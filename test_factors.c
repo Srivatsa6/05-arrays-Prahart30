@@ -1,8 +1,24 @@
 #include <stdio.h>
 #include <assert.h>
 
-
-int factors(int, int []);
+int factors(int n,int a[]){
+        int i=0;
+        while(n%2==0){
+          a[i]=2;
+          i++;
+          n=n/2;
+        }
+        for(int j=3; j<=n;j++){
+          while(n%j==0){
+            a[i]=j;
+            i++;
+            n=n/j;
+          }
+        }
+        if(n>2)
+          a[i]=n;
+        return i;
+      }
 
 int main(void) {
   int ret[100] = {0};
