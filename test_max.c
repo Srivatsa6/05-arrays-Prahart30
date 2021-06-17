@@ -2,7 +2,7 @@
 #include <assert.h>
 
 
-int max(int [], int) {
+int max(int myarray[], int size) {
     int c, maximum;
     maximum = myarray[0];
     for(c = 0; c < size; ++c) {
