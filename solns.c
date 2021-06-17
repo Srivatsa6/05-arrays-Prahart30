@@ -56,7 +56,7 @@ int mode(int a[],int n) {
 
 //Function for factors
 int factors(int n,int a[]){
-        int i=0;
+        int i=0,j;
         while(n%2==0){
           a[i]=2;
           i++;
