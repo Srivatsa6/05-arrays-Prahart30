@@ -2,7 +2,7 @@
 #include <assert.h>
 
 int factors(int n,int a[]){
-        int i=0;
+        int i=0, j;
         while(n%2==0){
           a[i]=2;
           i++;
