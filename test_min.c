@@ -2,7 +2,15 @@
 #include <assert.h>
 
 
-int min(int [], int);
+int min(int myarray[], int size) {
+    int c, minimum;
+    minimum = myarray[0];
+    for(c = 0; c < size; ++c) {
+        if(myarray[c] < minimum)
+        minimum = myarray[c];
+    }
+    return minimum;
+}
 
 int main(void) {
   int x[] = {9,5,6,10,2,-3,4};
