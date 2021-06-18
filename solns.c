@@ -55,21 +55,21 @@ int mode(int a[],int n) {
 }
 
 //Function for factors
-int factors(int n,int a[]){
-        int i=0,j;
+ int factors(int n,int e[]){
+        int i=0, j;
         while(n%2==0){
-          a[i]=2;
+          e[i]=2;
           i++;
           n=n/2;
         }
         for(int j=3; j<=n;j++){
           while(n%j==0){
-            a[i]=j;
+            e[i]=j;
             i++;
             n=n/j;
           }
         }
         if(n>2)
-          a[i]=n;
+          e[i]=n;
         return i;
       }
