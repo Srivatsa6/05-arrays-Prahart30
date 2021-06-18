@@ -2,6 +2,35 @@
 #include <stdio.h>
 #include <assert.h>
 
+//Function for average
+float average(int a[], int n){
+    int sum = 0;
+    for (int i=0; i<n; i++)
+       sum += a[i];
+ 
+    return (float)sum/n;
+}
+
+//Function for factors
+ int factors(int n,int e[]){
+        int i=0, j;
+        while(n%2==0){
+          e[i]=2;
+          i++;
+          n=n/2;
+        }
+        for(int j=3; j<=n;j++){
+          while(n%j==0){
+            e[i]=j;
+            i++;
+            n=n/j;
+          }
+        }
+        if(n>2)
+          e[i]=n;
+        return i;
+      }
+
 //Function for maximum
 int max(int myarray[], int size) {
     int c, maximum;
@@ -24,14 +53,6 @@ int min(int myarray[], int size) {
     return minimum;
 }
 
-//Function for average
-float average(int a[], int n){
-    int sum = 0;
-    for (int i=0; i<n; i++)
-       sum += a[i];
- 
-    return (float)sum/n;
-}
 
 //Function for mode
 int mode(int a[],int n) {
@@ -54,22 +75,3 @@ int mode(int a[],int n) {
    return maxValue;
 }
 
-//Function for factors
- int factors(int n,int e[]){
-        int i=0, j;
-        while(n%2==0){
-          e[i]=2;
-          i++;
-          n=n/2;
-        }
-        for(int j=3; j<=n;j++){
-          while(n%j==0){
-            e[i]=j;
-            i++;
-            n=n/j;
-          }
-        }
-        if(n>2)
-          e[i]=n;
-        return i;
-      }
