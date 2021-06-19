@@ -1,19 +1,57 @@
 /* Enter your solutions in this file */
 #include <stdio.h>
 #include <assert.h>
-
-//Function for average
-float average(int a[], int n){
-    int sum = 0;
-    for (int i=0; i<n; i++)
-       sum += a[i];
- 
-    return (float)sum/n;
+int max(int a[],int n){
+  int max= a[0];
+  for(int i=0; i<n; i++){
+    if(max < a[i]);
+    if(max < a[i]){
+    max=a[i];
+  }
 }
+return max;
+}
+int min(int b[], int n){
+  int min = b[0];
+  for(int i=0; i<n; i++){
+    if(min > b[i]){
+       min = b[i];
+       }
+       }
+       return min;
+       }
 
-//Function for factors
- int factors(int n,int e[]){
-        int i=0, j;
+
+       float average(int c[], int n){
+         float average =0;
+         for(int i=0; i<n; i++){
+           average+= c[i];
+         }
+         average = average/n;
+         return average;
+       }
+
+
+       int mode(int d[], int n){
+         int count = 0;
+         int mode = 0;
+         for(int i=0; i<n; i++){
+           int counts =0;
+           for(int j=0; j<n; j++){
+             if(d[j]==d[i]){
+               counts++;
+             }
+           }
+           if(counts > count)
+             count=counts;
+           mode = d[i];
+         }
+          return mode;
+             }
+
+
+      int factors(int n,int e[]){
+        int i=0;
         while(n%2==0){
           e[i]=2;
           i++;
@@ -30,48 +68,4 @@ float average(int a[], int n){
           e[i]=n;
         return i;
       }
-
-//Function for maximum
-int max(int myarray[], int size) {
-    int c, maximum;
-    maximum = myarray[0];
-    for(c = 0; c < size; ++c) {
-        if(myarray[c] > maximum)
-        maximum = myarray[c];
-    }
-    return maximum;
-}
-
-//Function for minimum
-int min(int myarray[], int size) {
-    int c, minimum;
-    minimum = myarray[0];
-    for(c = 0; c < size; ++c) {
-        if(myarray[c] < minimum)
-        minimum = myarray[c];
-    }
-    return minimum;
-}
-
-
-//Function for mode
-int mode(int a[],int n) {
-   int maxValue = 0, maxCount = 0, i, j;
-
-   for (i = 0; i < n; ++i) {
-      int count = 0;
-      
-      for (j = 0; j < n; ++j) {
-         if (a[j] == a[i])
-         ++count;
-      }
-      
-      if (count > maxCount) {
-         maxCount = count;
-         maxValue = a[i];
-      }
-   }
-
-   return maxValue;
-}
 
