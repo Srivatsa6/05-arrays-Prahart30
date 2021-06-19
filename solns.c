@@ -67,5 +67,4 @@ int min(int b[], int n){
         if(n>2)
           e[i]=n;
         return i;
-      }
-
+      }   
